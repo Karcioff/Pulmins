@@ -3,7 +3,8 @@ session_start(); // dive essere la prima cosa nella pagina, aprire la sessione
 include("connessione_db.php"); // includo il file di connessione al database
 if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
-} 
+}
+header('location:index.php?action=registration&errore= '.$_POST["username_reg"]);
 if($_POST["username_reg"] != "" && $_POST["password_reg"]!= ""){  // se i parametri iscritto non sono vuoti non sono vuote
 $query_registrazione = $connect->query("INSERT INTO login (username,password) VALUES ('".$_POST["username_reg"]."','".sha1($_POST["password_reg"])."')") or die ("Query di registrazione non riuscita".mysql_error()); // se la query fallisce mostrami questo errore
 }else{
