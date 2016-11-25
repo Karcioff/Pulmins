@@ -68,10 +68,8 @@ include("connessione_db.php");
         <!-- ================================================
           Scripts
           ================================================ -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <!--materialize js-->
-        <script type="text/javascript" src="js/materialize.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bin/materialize.min.js"></script>
         <!--prism-->
         <script type="text/javascript" src="js/prism.js"></script>
 
