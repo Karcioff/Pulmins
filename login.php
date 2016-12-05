@@ -7,9 +7,8 @@ $query = $connect->query("SELECT * FROM login WHERE username='".$_SESSION["usern
 if ($query->num_rows > 0) {
 	$_SESSION["logged"] =true;
 	$data = $query->fetch_assoc();
-	$_SESSION["utente"]=$data["id"];
+	$_SESSION["utente"]=$data["IdUtente"];
     header("Location:main.php");
 } else {
     header("Location: http://imgur.com/JfX8Rig.jpg");
 }
-?>
