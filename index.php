@@ -1,6 +1,6 @@
 <?php
 session_start(); // come sempre prima cosa, aprire la sessione 
-include("connessione_db.php"); // includere la connessione al database
+include("../connessioneDB_php/connessione_db.php"); // includere la connessione al database
 ?>
 <html>
     <head>
