@@ -10,21 +10,21 @@ class Settore {
     public $nome;
     public $responsabile;
     public $idSettore;
-    public $commesse; //array di commesse appartenenti al centro di costo
+    public $appalti; //array di commesse appartenenti al centro di costo
 
     /**
      * costruttore per oggetto centro di costo
      * @param type $unNome nome del settore
      * @param type $unResponsabile nome responsabile 
-     * @param type $delleCommesse array di commesse
+     * @param type $degliAppalti array di commesse
      * @param type $unId id univoco del settore
      */
 
-    public function __construct($unNome, $unResponsabile, $delleCommesse, $unId) {
+    public function __construct($unNome, $unResponsabile, $degliAppalti, $unId) {
         $this->nome = $unNome;
         $this->responsabile = $unResponsabile;
         $this->idSettore = $unId;
-        $this->commesse = $delleCommesse;
+        $this->appalti = $degliAppalti;
     }
 
 }
