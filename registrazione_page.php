@@ -14,6 +14,8 @@ include("connessione_db.php");
 
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Custome CSS-->    
+        <link href="css/custom-style.css" type="text/css" rel="stylesheet" media="screen,projection">
 
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link href="css/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -34,7 +36,7 @@ include("connessione_db.php");
                             <p class="center login-form-text">PULMINS REGISTRAZIONE</p>
                             <p>Inserisci i tuoi dati per accedere al servizio</p>
                         </div>
-                    </div>
+                    </div>            
                     <div class="row">
                         <div class="input-field col s12 l6 left">
                             <i class="material-icons prefix">perm_identity</i>
@@ -66,55 +68,31 @@ include("connessione_db.php");
                             <label for="mail_reg">Indirizzo mail</label>
                         </div>
                     </div>
-                    <div class="row margin">
-                        <div class="input-field col s12 l6 left">
-                            <select name="societa">
-                                <option value="" disabled selected>Seleziona la società</option>
-                                <?php
-                                //fetch nurse name
-                                $query = "SELECT societa FROM societa;";
-
-                                $result = $connect->query($query) or die(mysql_error()); //note: use mysql_error() for development only
-                                //print results
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    echo '<option value=\"' . $row['societa'] . '\">' . $row['societa'] . '</option>';
-                                }
-                                mysqli_close($connect);
-                                ?>
-                            </select>
-                        </div>
-                        <div class="input-field col s12 l6 right">
-                            <i class="material-icons prefix">lock_open</i>
-                            <input id="password_societa" name="password_societa" type="password">
-                            <label for="password_societa">Password società</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12 m8 l6 offset-m4 offset-l6 right-align">
-                            <button class="btn waves-effect waves-light" type="submit">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+            
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m4 offset-l6 right-align">
+                    <button class="btn waves-effect waves-light" type="submit">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
+</div>
 
 
 
-    <!-- ================================================
-      Scripts
-      ================================================ -->
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/validate.js"></script>
-    <!--inizializza la tendina-->
-    <script> $(document).ready(function () {
-            $('select').material_select();
-        });</script>
-    <!--prism-->
-    <script type="text/javascript" src="js/prism.js"></script>
+<!-- ================================================
+  Scripts
+  ================================================ -->
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script type="text/javascript" src="js/plugins.js"></script>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bin/materialize.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+<!--prism-->
+<script type="text/javascript" src="js/prism.js"></script>
 </body>
 
