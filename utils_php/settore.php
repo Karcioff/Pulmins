@@ -7,7 +7,7 @@
 
 class Settore {
 
-    public $nome;
+    public $nomeSettore;
     public $responsabile;
     public $idSettore;
     public $appalti; //array di commesse appartenenti al centro di costo
