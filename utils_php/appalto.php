@@ -4,10 +4,10 @@
  * classe che rappresenta una commessa, ossia un particolare appalto o insieme di servizi
  */
 class Appalto {
-    public $committente;
+    public $nomeAppalto;
     public $note;
     public $percorsi;
-    public $id;
+    public $idAppalto;
     public $idSettore;
     
     /**
@@ -19,7 +19,7 @@ class Appalto {
      * @param type int $unIdSettore id del settore di appartenenza
      */
     public function __construct($unCommittente,$delleNote,$deiPercorsi,$unId,$unIdSettore) {
-        $this->committente=$unCommittente;
+        $this->nomeAppalto=$unCommittente;
         $this->note=$delleNote;
         $this->id=$unId;
         $this->percorsi=$deiPercorsi;
