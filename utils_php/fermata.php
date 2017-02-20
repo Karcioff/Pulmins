@@ -11,8 +11,8 @@ class Fermata{
     public $utente;
     public $orario;
     public $note;
-    public $id;
-    public $idPercorso;
+    public $idFermata;
+    public $idGiro;
     
     /**
      * costruttore per fermata
@@ -23,10 +23,10 @@ class Fermata{
      * @param string $unUtente utenti
      * @param time $unOrario orario
      * @param string $delleNote eventuali note
-     * @param int $unId id univoco
-     * @param int $unIdPercorso id del percorso di appartenenza
+     * @param int $unIdFermata id univoco
+     * @param int $unIdGiro id del percorso di appartenenza
      */
-    public function __construct($unNome,$unaLat,$unaLng,$unIndirizzo,$unUtente,$unOrario,$delleNote,$unId,$unIdPercorso) {
+    public function __construct($unNome,$unaLat,$unaLng,$unIndirizzo,$unUtente,$unOrario,$delleNote,$unIdFermata,$unIdGiro) {
         $this->nome=$unNome;
         $this->lat=$unaLat;
         $this->lng=$unaLng;
@@ -34,8 +34,8 @@ class Fermata{
         $this->utente=$unUtente;
         $this->orario=$unOrario;
         $this->note=$delleNote;
-        $this->id=$unId;
-        $this->idPercorso=$unIdPercorso;                
+        $this->idFermata=$unIdFermata;
+        $this->idGiro=$unIdGiro;                
     }
     
 }
