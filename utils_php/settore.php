@@ -21,7 +21,7 @@ class Settore {
      */
 
     public function __construct($unNome, $unResponsabile, $degliAppalti, $unId) {
-        $this->nome = $unNome;
+        $this->nomeSettore = $unNome;
         $this->responsabile = $unResponsabile;
         $this->idSettore = $unId;
         $this->appalti = $degliAppalti;
