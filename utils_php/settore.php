@@ -9,7 +9,7 @@ class Settore {
 
     public $nome;
     public $responsabile;
-    public $id;
+    public $idSettore;
     public $commesse; //array di commesse appartenenti al centro di costo
 
     /**
@@ -20,10 +20,10 @@ class Settore {
      * @param type $unId id univoco del settore
      */
 
-    public function __construct($unNome, $unResponsabile, $delleCommesse, $unId, $unIdSocieta) {
+    public function __construct($unNome, $unResponsabile, $delleCommesse, $unId) {
         $this->nome = $unNome;
         $this->responsabile = $unResponsabile;
-        $this->id = $unId;
+        $this->idSettore = $unId;
         $this->commesse = $delleCommesse;
     }
 
