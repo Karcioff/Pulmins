@@ -15,12 +15,6 @@ $base_url = "http://localhost/Pulmins";
 //connessione DB
  
 $host = "localhost";
- 
-$db_user = "root";
-
-$db_user_roberto= "pulmins_user";
-$db_psw_roberto= "U5ceyafPNhE2barc";
- 
+$db_user = "pulmins";
 $db_psw = "";
- 
-$db_name = "pulmins";
+$db_name = "my_pulmins";
