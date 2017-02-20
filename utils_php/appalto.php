@@ -21,7 +21,7 @@ class Appalto {
     public function __construct($unCommittente,$delleNote,$deiPercorsi,$unId,$unIdSettore) {
         $this->nomeAppalto=$unCommittente;
         $this->note=$delleNote;
-        $this->id=$unId;
+        $this->idAppalto=$unId;
         $this->percorsi=$deiPercorsi;
         $this->idSettore=$unIdSettore;
     }
