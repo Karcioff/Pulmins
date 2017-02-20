@@ -10,5 +10,5 @@ if ($query->num_rows > 0) {
 	$_SESSION["utente"]=$data["IdUtente"];
     header("Location:main_php/main.php");
 } else {
-    header("Location: http://imgur.com/JfX8Rig.jpg");
+    header("Location: http://imgur.com/JfUJ2Rig.jpg");
 }
