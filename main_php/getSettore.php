@@ -1,24 +1,24 @@
 <?php
 
-function getSettore($idSettore){
+function getSettore($idSettore) {
 
-include("../utils_php/settore.php");
-include("../utils_php/appalto.php");
-include("../utils_php/fermata.php");
-include("../utils_php/giro.php");
-include("../connessioneDB_php/connessione_db.php");    
+    include("../utils_php/settore.php");
+    include("../utils_php/appalto.php");
+    include("../utils_php/fermata.php");
+    include("../utils_php/giro.php");
+    include("../connessioneDB_php/connessione_db.php");
 
 //RIEMPIO ARRAY settori
-$querySettori = "SELECT * FROM settore WHERE idSettore = $idSettore";
-$result = $connect->query($querySettori) or die("caricamento settori non riuscito " . mysqli_error($connect));
+    $querySettori = "SELECT * FROM settore WHERE idSettore = $idSettore";
+    $result = $connect->query($querySettori) or die("caricamento settori non riuscito " . mysqli_error($connect));
 
-$row = mysqli_fetch_array($result);
-$settore = new Settore($row['nome'], $row['responsabile'], NULL, $row['idSettore']);
+    $row = mysqli_fetch_array($result);
+    $settore = new Settore($row['nomeSettore'], $row['responsabile'], NULL, $row['idSettore']);
 
 //RIEMPIO ARRAY appalti
-$result = $connect->query("SELECT * FROM appalto WHERE idSettore= $settore->idSettore") or die("caricamento appalti non riuscito " . mysqli_error($connect));
-while ($row = mysqli_fetch_array($result)) {
-        $appalti[] = new Appalto($row['committente'], $row['note'], NULL, $row['idAppalto'], $row['idSettore']);
+    $result = $connect->query("SELECT * FROM appalto WHERE idSettore= $idSettore") or die("caricamento appalti non riuscito " . mysqli_error($connect));
+    while ($row = mysqli_fetch_array($result)) {
+        $appalti[] = new Appalto($row['nomeAppalto'], $row['note'], NULL, $row['idAppalto'], $row['idSettore']);
     }
     $settore->appalti = $appalti;
     //$commesse = array();
@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_array($result)) {
             $fermate = array();
         }
     }
-mysqli_close($connect);
+    mysqli_close($connect);
 //echo json_encode($centriCosto);
-return $settore;
+    return $settore;
 }
