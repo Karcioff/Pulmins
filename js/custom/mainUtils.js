@@ -8,24 +8,26 @@ function setLista(jsonPercorsi) {
 
 function savePercorsi() {
     $.getJSON("percorsi_database.php", function (json) {
-        var percorsi = JSON.stringify(json);
-        localStorage.setItem("percorsi", percorsi);
+        for (i = 0; i < json.length; i++) {
+            var centro = json[i];
+            var string = JSON.stringify(centro);
+            localStorage.setItem(centro.responsabile, string);
+        }
         setLista(json);
     });
 }
 
-function getPercorsi() {
-    return JSON.parse(localStorage.getItem("percorsi"));
-}
-
 function getCentriCosto() {
     $.getJSON("get_centri_costo.php", function (json) {
-        var centri = JSON.stringify(json);
-        localStorage.setItem("Centri_costo", centri);
-        document.getElementById("div_item_percorso").innerHTML = centri;
+        for (i = 0; i < json.length; i++) {
+            var centro = json[i];
+            var string = JSON.stringify(centro);
+            localStorage.setItem(centro.nome, string);
+        }
+        document.getElementById("div_item_percorso").innerHTML = JSON.stringify(json);
     });
-    
-    
+
+
 }
 
 
