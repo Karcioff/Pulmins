@@ -43,6 +43,9 @@ function getSettore($idSettore) {
         }
     }
     mysqli_close($connect);
-//echo json_encode($centriCosto);
-    return $settore;
+    return json_encode($settore);
+}
+
+if (isset($_GET['idSettore'])) {
+    echo getSettore($_GET['idSettore']);
 }
