@@ -6,10 +6,11 @@
 function setListaAppalti(idSettore) {
     var result = "";
     $.getJSON("getSettore.php", {idSettore: idSettore}, function (settore) {
-        for (var appalto in settore.appalti) {
-            result = '<li id="' + appalto.idAppalto + '">';
-            result = result + '<div class="collapsible-header">' + appalto.nomeAppalto + '</div>' +
-                    '<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div></li>';
+        for (i=0;i<settore.appalti.length;i++) {
+            result = result + '<li id="' + settore.appalti[i].idAppalto + '">\n';
+            result = result + '<div class="collapsible-header">' + settore.appalti[i].nomeAppalto + '</div>\n' +
+                    '<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div></li>\n';
+            
         }
         document.getElementById("listaAppalti").innerHTML = result;
     });
