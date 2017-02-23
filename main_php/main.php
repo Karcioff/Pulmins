@@ -45,7 +45,7 @@
                         </ul>
                     </div>
                     <div id="tab1" class="col s12">
-                        <ul class="listaAppalti" data-collapsible="accordion">
+                        <ul class="collapsible popout" id="listaAppalti" data-collapsible="accordion">
                             <li>
                                 <div class="collapsible-header"><i class="material-icons">place</i>Murad</div>
                                 <div class="fermata collapsible-body">
@@ -106,8 +106,8 @@
 
         <script src="../js/jquery-3.1.1.min.js"></script>           
         <script src="../js/custom/mainUtils.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
+        <script src="../js/materialize.js"></script>
+        <script src="../js/init.js"></script>
         <script>
             $(document).ready(function () {
                 setListaAppalti(1);
