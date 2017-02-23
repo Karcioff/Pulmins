@@ -105,8 +105,9 @@
         </footer>
 
         <script src="../js/jquery-3.1.1.min.js"></script>           
-        <script src="../js/bin/materialize.min.js"></script>
         <script src="../js/custom/mainUtils.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
         <script>
             $(document).ready(function () {
                 setListaAppalti(1);
