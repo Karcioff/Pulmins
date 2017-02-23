@@ -1,5 +1,10 @@
+function setListaGiri(idGiro) {
+    var result = "";
+    
+}
 /**
  * imposta la lista degli appalti
+ * chiamare il contenitore <ul> "listaAppalti", da invocare alla fine
  * @param {type} idSettore
  * @returns {undefined}
  */
