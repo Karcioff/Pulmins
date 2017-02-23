@@ -35,35 +35,37 @@
             </div>
         </nav>
         <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row ">
-                    <div class="col s12">
-                        <ul class="tabs tabs-fixed-width">
-                            <li class="tab col s3 "><a href="#tab1" class="blue-text text-darken-4">Test 1</a></li>
-                            <li class="tab col s3"><a href="#tab2" class="active blue-text text-darken-4">Test 2</a></li>
-                            <li class="tab col s3"><a href="#tab3" class="blue-text text-darken-4">Test 4</a></li>
-                        </ul>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col s12 m5 l5">
+                        <div class="col s12">
+                            <ul class="tabs tabs-fixed-width">
+                                <li class="tab col s3 "><a href="#tab1" class="blue-text text-darken-4">Test 1</a></li>
+                                <li class="tab col s3"><a href="#tab2" class="active blue-text text-darken-4">Test 2</a></li>
+                                <li class="tab col s3"><a href="#tab3" class="blue-text text-darken-4">Test 4</a></li>
+                            </ul>
+                        </div>
+                        <div id="tab1" class="col s12">
+                            <ul class="collapsible popout" id="listaAppalti" data-collapsible="accordion">
+                                <li>
+                                    <div class="collapsible-header"><i class="material-icons">place</i>Murad</div>
+                                    <div class="fermata collapsible-body">
+                                        Qui ci sono due colonne	
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header"><i class="material-icons">place</i>Gino pasticcino</div>
+                                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header"><i class="material-icons">place</i>San Pietroburgo</div>
+                                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tab2" class="col s12">Test 2</div>
+                        <div id="tab3" class="col s12">Test 4</div>
                     </div>
-                    <div id="tab1" class="col s12">
-                        <ul class="collapsible popout" id="listaAppalti" data-collapsible="accordion">
-                            <li>
-                                <div class="collapsible-header"><i class="material-icons">place</i>Murad</div>
-                                <div class="fermata collapsible-body">
-                                    Qui ci sono due colonne	
-                                </div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header"><i class="material-icons">place</i>Gino pasticcino</div>
-                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header"><i class="material-icons">place</i>San Pietroburgo</div>
-                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="tab2" class="col s12">Test 2</div>
-                    <div id="tab3" class="col s12">Test 4</div>
                 </div>
             </div>
         </div>
