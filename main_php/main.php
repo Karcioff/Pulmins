@@ -35,36 +35,37 @@
             </div>
         </nav>
         <div class="section no-pad-bot">
-                <div class="container">
-                    <div class="row ">
-                        <div class="col s12 m5 l5">
+            <div class="container">
+                <div class="row ">
+                    <div class="col s12 m5 l4">
                         <div class="col s12">
                             <ul class="tabs tabs-fixed-width">
-                                <li class="tab col s3 "><a href="#tab1" class="blue-text text-darken-4">Test 1</a></li>
-                                <li class="tab col s3"><a href="#tab2" class="active blue-text text-darken-4">Test 2</a></li>
-                                <li class="tab col s3"><a href="#tab3" class="blue-text text-darken-4">Test 4</a></li>
+                                <li class="tab col s3 "><a href="#trasportiTab" class="blue-text text-darken-4">Trasporti</a></li>
+                                <li class="tab col s3"><a href="#sanitarioTab" class="active blue-text text-darken-4">Sanitario</a></li>
+                                <li class="tab col s3"><a href="#scolasticoTab" class="blue-text text-darken-4">Scolastico</a></li>
                             </ul>
                         </div>
-                        <div id="tab1" class="col s12">
-                            <ul class="collapsible popout" id="listaAppalti" data-collapsible="accordion">
-                                <li>
-                                    <div class="collapsible-header"><i class="material-icons">place</i>Murad</div>
-                                    <div class="fermata collapsible-body">
-                                        Qui ci sono due colonne	
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="collapsible-header"><i class="material-icons">place</i>Gino pasticcino</div>
-                                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div class="collapsible-header"><i class="material-icons">place</i>San Pietroburgo</div>
-                                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
+                        <div id="trasportiTab" class="col s12">
+
+                            <ul class="collapsible popout" id="listaAppaltiTrasporti" data-collapsible="accordion">
+                                <!--  placeholder per lista appalti-->
                             </ul>
+
                         </div>
-                        <div id="tab2" class="col s12">Test 2</div>
-                        <div id="tab3" class="col s12">Test 4</div>
+                        <div id="sanitarioTab" class="col s12">
+
+                            <ul class="collapsible popout" id="listaAppaltiSanitario" data-collapsible="accordion">
+                                <!--  placeholder per lista appalti-->
+                            </ul>
+                            
+                        </div>
+                        <div id="scolasticoTab" class="col s12">
+
+                            <ul class="collapsible popout" id="listaAppaltiScolastico" data-collapsible="accordion">
+                                <!--  placeholder per lista appalti-->
+                            </ul>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,7 +113,8 @@
         <script src="../js/init.js"></script>
         <script>
             $(document).ready(function () {
-                setListaAppalti(1);
+                setListaAppalti(1,"listaAppaltiTrasporti");
+                setListOnClickListener();
             });
         </script>
     </body>
