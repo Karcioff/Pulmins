@@ -38,11 +38,11 @@
             <div class="container">
                 <div class="row ">
                     <div class="col s12 m5 l4">
-                        <div class="col s12">
+                        <div class="col">
                             <ul class="tabs tabs-fixed-width">
-                                <li class="tab col s3 "><a href="#trasportiTab" class="blue-text text-darken-4">Trasporti</a></li>
-                                <li class="tab col s3"><a href="#sanitarioTab" class="active blue-text text-darken-4">Sanitario</a></li>
-                                <li class="tab col s3"><a href="#scolasticoTab" class="blue-text text-darken-4">Scolastico</a></li>
+                                <li class="tab col"><a href="#trasportiTab" class="blue-text text-darken-4">Trasporti</a></li>
+                                <li class="tab col"><a href="#sanitarioTab" class="active blue-text text-darken-4">Sanitario</a></li>
+                                <li class="tab col"><a href="#scolasticoTab" class="blue-text text-darken-4">Scolastico</a></li>
                             </ul>
                         </div>
                         <div id="trasportiTab" class="col s12">
